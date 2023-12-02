@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+ <html> 
+ <head> 
+ <style>
+   body{ 
+  margin:50px; 
+  color:#0af; 
+  background:#000; 
+  border:2px white solid; 
+  text-align:center; 
+  box-shadow: 
+  0 0 10px red, 
+  0 0 20px red, 
+  0 0 40px green, 
+  0 0 80px #0ef, 
+  0 0 160px #0ef; 
+  } 
+  button{ 
+  position:relative; 
+  display:inline-block; 
+  font-size:1.5em; 
+  letter-spacing: .1em; 
+  color:#0ef; 
+  text-decoration:none; 
+  text-transform: uppercase; 
+  border:2px solid #0ef; 
+  border-radius: 30px; 
+  padding:10px 30px; 
+  background: black; 
+  z-index: 1; 
+  overflow: hidden; 
+  transition:color 1s, box-shadow 1s; 
+  margin:30px; 
+  }
+  button:hover{ 
+  transition-delay: 0s 1s; 
+  color: #fff; 
+  box-shadow: 
+  0 0 10px #0ef, 
+  0 0 20px #0ef, 
+  0 0 40px #0ef, 
+  0 0 80px #0ef, 
+  0 0 160px #0ef; 
+  } 
+  button::before{ 
+  content:''; 
+  position:absolute; 
+  top: 0; 
+  left: -50; 
+  width: 0%; 
+  height:100%; 
+  background-color:#0ef; 
+  transform:skewX(35deg); 
+  transition:1s; 
+  z-index: -1; 
+  }
+  button:hover::before{ 
+  width:100%; 
+  } 
+  #p01{ 
+  color:red; 
+  font-weight:600;
+  } 
+  input{ 
+  width: 50%; 
+  padding: 12px 20px;
+  margin: 8px 0; 
+  display: inline-block; 
+  border: 3px solid #0ef; 
+  border-radius: 25px; 
+  box-sizing: border-box; 
+  text-align:center; 
+  font-weight:600; 
+  background : #000; 
+  color: #fff;
+  } 
+  h2{ 
+  text-shadow:2px 2px 3px red; 
+  letter-spacing:5px;
+  }
+  #play-again{
+      display:none;
+  }
+  #info{
+      text-align: right;
+      padding-right:5px;
+  }
+  #info-made{
+    color: red;  
+  }
+ </style>
+ </head>
+  <body> 
+  <h2>Yo sup,<span id="name"></span>!!</h2>
+  <h3 id="time"></h3> 
+  <p id='label'>Please guess a number between 1 and 10:</p> 
+  <input id="demo" type="text"><br>
+  <button type="button" onclick="myFunction()" id="my_btn">check</button> 
+  <button type='button' id='play-again' onclick='play_again()'>play again</button>
+  <p id="p01">🤔🤔🤔</p> 
+  <h6 id = 'info' ><span id ='info-made'>Made by:</span> Azariyas mekonen</h6>
+  <script>
+    setInterval(myTimer, 1000); 
+    function myTimer() { 
+    const d = new Date(); 
+    document.getElementById("time").innerHTML = d.toLocaleTimeString();
+     } 
+     let n=prompt('Please enter your name!!'); 
+     if(n==null){ 
+     n=prompt('Please enter your name!!'); 
+     } 
+     else{ 
+     document.getElementById('name').innerHTML=n; } 
+     var y= Math.floor(Math.random()*10); 
+     var num=document.getElementById('guess').innerHTML; 
+     function myFunction() { 
+     const message = document.getElementById("p01"); 
+     message.innerHTML = ""; 
+     let x = document.getElementById("demo").value; 
+     try { 
+     if(x.trim() == "") throw "is empty"; 
+     if(isNaN(x)) throw "is not a number"; 
+     x = Number(x); 
+     if(x > 10) throw "is out of the range"; 
+     if(x < 1) throw "is out of the range"; 
+     if(x > y) throw "is too high!!"; 
+     if(x < y) throw "is too low!!"; 
+     if(x == y) throw "👍👍👍is correct!!!👍👍👍"; 
+     } 
+     catch(err) { 
+     message.innerHTML = "Your guess " + err; 
+     } 
+     finally { 
+     document.getElementById("demo").value = ""; 
+     if(x == y){ 
+     message.style.color="#0f0";  
+     document.getElementById("my_btn").style.display ='none'; 
+     document.getElementById("demo").style.display ='none';
+     document.getElementById("play-again").style.display ='inline-block';
+     document.getElementById("label").innerHTML ='Try this best guessing game again!!';
+     } 
+     else{ 
+     message.style.color="#f00"; }
+      } 
+      }
+      function play_again(){
+          y = Math.floor(Math.random()*10);
+          document.getElementById("my_btn").style.display ='inline-block'; 
+          document.getElementById("demo").style.display ='inline-block';
+          document.getElementById("play-again").style.display ='none';
+          document.getElementById("label").innerHTML ='Please guess a number between 1 and 10:';
+          document.getElementById("p01").innerHTML = '🤔🤔🤔';
+      }
+
+
+  </script>
+  </body> 
+  </html>
