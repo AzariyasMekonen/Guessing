@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Copmatible" content="IE=edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Personal portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="image/new logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Service</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fas fa-times"onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars"onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>UI/UX </p>
+                    <h1>Hi, I'm <span>Azariyas</span><br>I'm from Ethiopia</h1>
+                </div>
+            </div>
+        </div>
+        <!---------------------about--------------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="image/kings pic.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>"Hello! I'm King, a devoted and knowledgeable web developer. I specialize in developing aesthetically pleasing and user-friendly websites since I have a solid foundation in coding and a great eye for design. I have a thorough knowledge of HTML, CSS, JavaScript, and other web development technologies, which enables me to bring concepts to life and produce outcomes of the highest caliber. </p>
+                            
+                        
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                                <li><span>Web Development</span><br>Designing Web/App interfaces</li>
+                                <li><span>App Development</span><br>Building Android/ios apps</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li><span>2024 - current</span><br>UI/UX Design class at dan Energy</li>
+                                <li><span>2020</span><br> working on some website </li>
+                                <li><span>before 2020</span><br>execrcising some codes</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2024</span><br>learning HTML,CSS,JAVA SCRIPT,DATABASE</li>
+                                <li><span>2021</span><br>LEARN IN EC COMPUTER LEARNING CENTER</li>
+                                <li><span>BEFORE 2021</span><br>SOME CODING COURSE THROUGH ONLINE</li>
+                            </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------services--------------->
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My services</h1>
+                <div class="services-list">
+                    <div class="services-list">
+                        <div>
+                            <i class="fas fa-code"></i>
+                            <h2>web Design</h2>
+                            <p> Web design involves creating visually appealing, user-friendly websites with UX focus, optimizing for various devices and screen sizes, and enhancing user engagement and online presence.</p>
+                            <a href="#">learn more</a>
+                        </div>
+                        <div>
+                            <i class="fas fa-crop-alt"></i>
+                            <h2>UI/UX</h2>
+                            <P>User experience and user interface are two words that are interrelated. While UI often focuses on how users interact with computer systems, software, and apps, UX is more broadly concerned with how a user feels about a particular company, item, or service. </P>
+                            <a href="#">learn more</a>
+                        </div>
+                        <div>
+                            <i class="fab fa-app-store"></i>
+                            <h2>App design</h2>
+                            <p>App design creates mobile applications' visual and interactive components, focusing on the user interface (UI) and user experience (UX) for a aesthetically pleasing, intuitive, and simple experience. It involves layout, color scheme, typography, icons, buttons, and aesthetics to improve usability and functionality.
+                                <a href="#">learn more</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----------------portfolio--------------->
+        <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="image/guessing game.png">
+                    <div class="layer">
+                        <h3>guessing game</h3>
+                        <p>This guessing game is uses to entertain your self by guessing number until you get the real one. </p>
+                        <a href="guessing game.html"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/cal.jpeg">
+                    <div class="layer">
+                        <h3>calculator</h3>
+                        <p>Calculators enhance efficiency, accuracy, problem-solving, and accessibility in various professions, but should not replace mathematical knowledge; they improve problem-solving abilities and speed processes. </p>
+                        <a href="calculator 2.html"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="image/Screenshot (296).png">
+                    <div class="layer">
+                        <h3>simple website(portfolio)</h3>
+                        <p>This website uses to describe me and what actually i did in my life like my past story like what i learnt, in this website i used html, css and js(java script) . </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+        </div>
+<!---------------------Contact-------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>Kinguteshome@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>+251984575000</p>
+                <div class="social-icons">
+                    <a href="https://twitter.com/__zackie__"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/night_traveller__/"><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href="https://t.me/dtx_zack"><i class="fa fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit"class="btn btn2">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright © kings portfolio</p>
+    </div>
+</div>
+
+
+        <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontents of tabcontents){
+                tabcontents.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        </script>
+    <script>
+
+        var sidemeu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+        
+    </body>
+    </html>
